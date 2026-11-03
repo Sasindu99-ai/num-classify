@@ -2,7 +2,7 @@
 
 > **Module:** `src.a2` — Path A (Raw $28 \times 28$ Grayscale) & Feature Set A2 (56 Row + Column Sums)  
 > **Course:** EE5130 Artificial Intelligence and Machine Learning  
-> **Author / Assigned Member:** Assigned Portion (Path A & Feature Set A2)
+> **Author / Assigned Member:** Rachani Perera - Assigned Portion (Path A & Feature Set A2)
 
 ---
 
