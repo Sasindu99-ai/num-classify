@@ -1,2 +1,72 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Project Specific: Generated Datasets & Binary Features
+# (Original raw CSVs remain tracked in data/raw/ via Git LFS)
+data/processed/
+data/augmented/
+data/features/
+*.npz
+*.npy
+
+# Project Specific: Heavy Trained Model Weights & Checkpoints
+# (Avoids GitHub 100MB file limit, e.g. random_forest.joblib is >500MB)
+results/models/
+results/*/models/
+*.joblib
+*.pt
+*.pth
+*.onnx
+
+# Lock files (uv / poetry / pipenv)
 *.lock
-.idea

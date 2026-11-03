@@ -1,134 +1,211 @@
-# num-classify
+# EE5130 Mini Project: MNIST Classification & Clustering
 
-Handwritten digit classification and exploration using the MNIST dataset.
-
----
-
-## 📌 Overview
-
-`num-classify` is a machine learning project focused on exploring, visualizing, and classifying handwritten digits (0–9) using the standard **MNIST** dataset. Built with Python 3.12 and modern scientific libraries, the project leverages [uv](https://github.com/astral-sh/uv) for fast, reproducible dependency management and virtual environment orchestration.
+> **Course:** EE5130 Artificial Intelligence and Machine Learning  
+> **Topic:** Comparative Study of Supervised Classification and Unsupervised Clustering Techniques Using the MNIST Dataset  
+> **Repository Architecture:** Representation-First Modular Design (Zero Merge Conflicts Across Assigned Portions)
 
 ---
 
-## 📁 Project Structure
+## 📌 Executive Summary & Architecture
+
+This repository contains the complete experimental framework for evaluating **Supervised Classification (Part A)** and **Unsupervised Clustering (Part B)** across multiple feature representations of the standard MNIST digit dataset.
+
+To ensure clean isolation between team members working on different representations, the codebase adheres to a **Representation-First Modular Architecture**:
 
 ```text
 num-classify/
 ├── data/
-│   └── raw/
-│       ├── mnist_train.csv     # Training dataset (60,000 samples)
-│       └── mnist_test.csv      # Testing dataset (10,000 samples)
-├── docs/                       # Project specifications and guidelines
+│   ├── raw/                      # Shared raw datasets (mnist_train.csv, mnist_test.csv - tracked via Git LFS)
+│   ├── processed/                # Shared stratified 54k/6k train/val split (clean_partitions.npz)
+│   ├── augmented/                # Augmented training copies (e.g. data/augmented/raw/ for Path A)
+│   └── features/                 # Extracted feature matrices organized by representation
+│       ├── a1/                   # (Assigned Member: 784 Raw Flattened Pixels)
+│       ├── a2/                   # (Assigned: 56 Continuous Row + Col Sums + 2-D CNN)
+│       ├── a3/                   # (Assigned Member: 14 Concentric Rings)
+│       ├── b1/                   # (Assigned Member: Flattened Contour Pixels)
+│       ├── b2/                   # (Assigned Member: Contour Row + Col Sums)
+│       └── b3/                   # (Assigned Member: Contour Concentric Rings)
 ├── src/
-│   └── visualize.ipynb         # Notebook for data loading & 28x28 pixel visualization
-├── .python-version             # Pinned Python version (3.12)
-├── pyproject.toml              # Project dependencies & metadata
-├── uv.lock                     # Deterministic dependency lockfile
-└── README.md                   # Project documentation
+│   ├── common/                   # Shared infrastructure across all team members
+│   │   ├── utils.py              # Fixed SEED=42, path resolvers, CUDA device configuration
+│   │   └── data_loading.py       # Anti-leakage stratified train/val split
+│   ├── a1/                       # Submodule for Feature Set A1
+│   ├── a2/                       # === FEATURE SET A2 PACKAGE (Implemented & Verified) ===
+│   │   ├── augmentation.py       # Label-preserving Path A affine transformations (162k train set)
+│   │   ├── features.py           # 56 continuous row/col sums extraction & StandardScaler
+│   │   ├── verify_phase1.py      # Phase 1 verification assertions & diagnostic plots
+│   │   ├── classification/       # Part A: 8 Classical + PyTorch MLP (56 A2) & CNN (2-D Path A)
+│   │   ├── clustering/           # Part B: 6 Clustering algorithms + PCA ablation
+│   │   └── interactive_demo.py   # Live CLI/GUI exhibition demonstration tool
+│   ├── a3/                       # Submodule for Feature Set A3
+│   ├── b1/                       # Submodule for Feature Set B1
+│   ├── b2/                       # Submodule for Feature Set B2
+│   ├── b3/                       # Submodule for Feature Set B3
+│   └── compare_all.py            # Master cross-representation aggregator & leaderboard generator
+├── results/
+│   ├── a2/                       # Results, figures, CMs, and tables for Feature Set A2
+│   └── master_tables/            # Unified cross-representation leaderboards
+├── docs/                         # Assignment specifications and technical reports
+├── README.md                     # Repository overview & team integration guidelines
+├── README_A2.md                  # Comprehensive documentation for Feature Set A2
+└── requirements.txt              # Standard Python scientific stack + PyTorch with CUDA
 ```
 
 ---
 
-## 🛠️ Prerequisites & Installation
+## 👥 Module Allocation & Scope
 
-### 1. Install Git Tools (GitHub Desktop & Git LFS)
+The EE5130 project investigates two preprocessing paths and three feature reductions:
 
-Before cloning and setting up the repository, make sure you have installed the required Git tools:
+| Path | Representation | Description | Features | Package Directory | Status |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| **Path A** (Raw Grayscale) | **A1** | Flattened Pixel Intensities | 784 | `src/a1/` | Teammate Module |
+| **Path A** (Raw Grayscale) | **A2** | **Row + Column Sums & 2-D CNN** | **56** | **`src/a2/`** | **✅ Completed & Verified** |
+| **Path A** (Raw Grayscale) | **A3** | Concentric Ring Densities | 14 | `src/a3/` | Teammate Module |
+| **Path B** (Contours) | **B1** | Flattened Contour Pixels | 784 | `src/b1/` | Teammate Module |
+| **Path B** (Contours) | **B2** | Contour Row + Column Sums | 56 | `src/b2/` | Teammate Module |
+| **Path B** (Contours) | **B3** | Contour Concentric Rings | 14 | `src/b3/` | Teammate Module |
 
-- **[GitHub Desktop](https://desktop.github.com/):** Simplifies cloning, branching, and commit management with an intuitive GUI. Download and install it from [desktop.github.com](https://desktop.github.com/).
-- **[Git LFS (Large File Storage)](https://git-lfs.com/):** Essential for versioning large files such as dataset CSVs and model checkpoints without bloating the Git history.
-  - Download and install from [git-lfs.com](https://git-lfs.com/), or install via Chocolatey:
-    ```powershell
-    choco install git-lfs
-    ```
-  - Once installed, initialize Git LFS on your system by running:
-    ```bash
-    git lfs install
-    ```
+👉 For in-depth documentation, mathematical derivations, failure mode analysis, and reproduction details of **Feature Set A2**, please refer to **[`README_A2.md`](README_A2.md)**.
 
 ---
 
-### 2. Install Chocolatey & `uv` (Windows)
+## 🤝 Team Integration & Collaboration Guidelines
 
-This project uses **[uv](https://github.com/astral-sh/uv)** for fast, reliable package and environment management.
+To allow multiple team members to push and merge independently without conflicts:
 
-Open **PowerShell as Administrator** and install [Chocolatey](https://chocolatey.org/):
+### 1. Zero-Overlap File Structure
+- Never edit files outside your assigned module directory (`src/<module>/`, `data/features/<module>/`, `results/<module>/`).
+- Common functions (seeds, device resolution, data splitting) must remain in `src/common/`.
 
-```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-```
+### 2. Strict Anti-Leakage Protocol
+All modules must adhere to the shared experimental safeguards:
+- **Never touch the test set** during preprocessing, scaler fitting, or hyperparameter selection.
+- **Never augment the validation or test sets**.
+- Run `python -m src.common.data_loading` once to populate `data/processed/clean_partitions.npz` (54,000 train, 6,000 val, 10,000 test).
+- Fit scalers (`StandardScaler`, etc.) strictly on the training partition and save them to `data/features/<module>/scaler_<module>.joblib`.
 
-Once Chocolatey is installed, install `uv`:
+### 3. Master Aggregator Compatibility
+When your experiments finish, save your evaluation tables to:
+- `results/<module>/tables/classification_summary.csv`
+- `results/<module>/tables/clustering_metrics.csv`
 
-```powershell
-choco install uv
-```
-
-> **Tip (Alternative Install):** You can also install `uv` directly using the official installer:
-> ```powershell
-> powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-> ```
-> On macOS/Linux:
-> ```bash
-> curl -LsSf https://astral.sh/uv/install.sh | sh
-> ```
-
----
-
-### 3. Clone Repository & Set Up the Environment
-
-Clone the repository (via GitHub Desktop or CLI) and install all dependencies:
-
+Running the cross-representation comparator:
 ```bash
-# Navigate to the project directory
+python -m src.compare_all
+```
+will automatically discover all completed modules and build the unified master classification and clustering leaderboards in `results/master_tables/`.
+
+---
+
+## ⚡ Quickstart & Setup
+
+### 1. Prerequisites
+- Python 3.12 (or compatible 3.12–3.15)
+- Git & Git LFS (`git lfs install; git lfs pull`)
+- NVIDIA GPU with CUDA support (tested on RTX 5060 Laptop GPU with CUDA 13.2 / `sm_120`)
+
+### 2. Environment Setup
+```bash
+# Clone the repository
+git clone https://github.com/rachani-perera/num-classify.git
 cd num-classify
 
-# Synchronize dependencies and configure virtual environment
-uv sync
+# Create and activate virtual environment
+python -m venv .venv
+# Windows:
+.\.venv\Scripts\activate
+# Linux/macOS:
+source .venv/bin/activate
+
+# Install required scientific packages
+pip install -r requirements.txt
 ```
 
----
-
-## 🚀 Usage
-
-### Running Jupyter Notebook
-
-Launch Jupyter to explore the notebooks in `src/`:
-
+### 3. Reproduce Feature Set A2 End-to-End
 ```bash
-uv run jupyter notebook
+# Step 1: Preprocessing & Data Partitions
+python -m src.common.data_loading
+
+# Step 2: Path A Training Augmentations (162,000 samples)
+python -m src.a2.augmentation
+
+# Step 3: Feature Set A2 Extraction (56 Continuous Row/Col Sums)
+python -m src.a2.features
+
+# Step 4: Verification Gate
+python -m src.a2.verify_phase1
+
+# Step 5: Part A Supervised Classification (8 Classical Models + MLP & CNN)
+python -m src.a2.classification.classical_models
+python -m src.a2.classification.neural_models
+python -m src.a2.classification.evaluate
+
+# Step 6: Part B Unsupervised Clustering (6 Algorithms + Projections)
+python -m src.a2.clustering.cluster_models
+python -m src.a2.clustering.evaluate
+python -m src.a2.clustering.visualize
+
+# Step 7: Cross-Representation Master Leaderboard
+python -m src.compare_all
 ```
 
-Alternatively, open `src/visualize.ipynb` directly in your favorite IDE (such as VS Code, Cursor, or PyCharm) using the `.venv` kernel created by `uv`.
+### 4. Interactive Live Exhibition Demonstration
+To inspect live model predictions, ink profiles, and spatial projection loss on test digits:
+```bash
+# Run on sample #0 (Success case: A2 and CNN both predict '7')
+python -m src.a2.interactive_demo --index 0
 
-### Visualizing Digits
-
-The `src/visualize.ipynb` notebook loads the raw MNIST CSV data, reshapes 784 pixel intensity values into $28 \times 28$ grayscale images, and displays sample digits alongside their corresponding class labels.
-
----
-
-## 📊 Dataset Details
-
-The dataset files should be placed in `data/raw/` (downloaded from the provided Google Drive link or repository):
-
-- **Features:** 784 grayscale pixel values ($28 \times 28$), ranging from `0` to `255`.
-- **Target:** `label` representing the digit class ($0$ through $9$).
-- **Sets:**
-  - `mnist_train.csv`: Training samples
-  - `mnist_test.csv`: Evaluation samples
+# Run on sample #7 (Projection failure case: A2 predicts '4', CNN resolves '9')
+python -m src.a2.interactive_demo --index 7
+```
 
 ---
 
-## 📦 Dependencies
+## 🏆 Current Benchmark (Feature Set A2 & Path A CNN)
 
-- Python `>=3.12`
-- [NumPy](https://numpy.org/)
-- [Pandas](https://pandas.pydata.org/)
-- [Matplotlib](https://matplotlib.org/)
-- [Jupyter Notebook](https://jupyter.org/)
+### Supervised Classification (Isolated 10,000 Test Samples)
+
+| Rank | Model | Input Representation | Test Acc (%) | Macro F1 | ROC-AUC | Inference (ms/1k) | Model Size |
+| :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| 🥇 | **Convolutional Neural Network (CNN)** | **2-D Path A Images ($28 \times 28$)** | **99.61%** | **0.9961** | **0.99999** | 25.60 ms | 3.44 MB |
+| 🥈 | **Gradient Boosting** | Feature Set A2 (56 features) | **93.96%** | **0.9386** | **0.9975** | 16.92 ms | 5.25 MB |
+| 🥉 | **Multilayer Perceptron (MLP)** | Feature Set A2 (56 features) | **93.59%** | **0.9347** | **0.9973** | 4.29 ms | 0.07 MB |
+| 4 | **Support Vector Machine (SVM)** | Feature Set A2 (56 features) | **92.44%** | **0.9229** | **0.9953** | 788.15 ms | 5.35 MB |
+| 5 | **Random Forest** | Feature Set A2 (56 features) | **91.86%** | **0.9174** | **0.9956** | 6.25 ms | 502.99 MB |
+| 6 | **k-Nearest Neighbours (k-NN)** | Feature Set A2 (56 features) | **88.42%** | **0.8810** | **0.9724** | 46.19 ms | 8.85 MB |
+| 7 | **Decision Tree** | Feature Set A2 (56 features) | **83.47%** | **0.8325** | **0.9278** | 0.19 ms | 1.73 MB |
+| 8 | **Logistic Regression** | Feature Set A2 (56 features) | **78.69%** | **0.7774** | **0.9658** | 0.12 ms | 3.05 KB |
+| 9 | **Linear Discriminant Analysis** | Feature Set A2 (56 features) | **72.65%** | **0.7187** | **0.9538** | 0.11 ms | 7.56 KB |
+| 10 | **Naive Bayes** | Feature Set A2 (56 features) | **60.21%** | **0.5707** | **0.9303** | 2.18 ms | 5.13 KB |
+
+### Unsupervised Clustering ($N = 10,000$, $k=10$ Baseline on Standardized A2)
+
+| Algorithm | Clusters | Silhouette | Davies-Bouldin | Calinski-Harabasz | ARI | NMI | V-Measure |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Spectral Clustering** | 10 | 0.0668 | **1.9049** | 683.73 | **0.3537** | **0.5133** | **0.5133** |
+| **Agglomerative (Ward)** | 10 | 0.0646 | 2.4124 | 729.25 | **0.2997** | **0.4517** | **0.4517** |
+| **Mini-Batch k-Means** | 10 | 0.1018 | 2.1421 | 868.74 | 0.2719 | 0.3757 | 0.3757 |
+| **Gaussian Mixture (GMM)** | 10 | 0.0544 | 2.6312 | 588.90 | 0.2486 | 0.3716 | 0.3716 |
+| **k-Means (PCA-15 on A2)** | 10 | 0.1121 | 1.9433 | 927.51 | 0.2339 | 0.3691 | 0.3691 |
+| **k-Means** | 10 | **0.1143** | 1.9391 | **928.75** | 0.2320 | 0.3696 | 0.3696 |
+| **DBSCAN** | 1 (11.6% noise) | — | — | — | — | — | — |
 
 ---
 
-## 📄 License
+## 🔍 Key Theoretical Finding: Spatial Projection Ambiguity
 
-This project is licensed under the [MIT License](LICENSE).
+A foundational insight of our investigation is the mathematical characterization of **Spatial Projection Ambiguity** inherent in Feature Set A2:
+$$\mathbf{f}_{\text{row}}[i] = \sum_{j=1}^{28} I[i, j], \quad \mathbf{f}_{\text{col}}[j] = \sum_{i=1}^{28} I[i, j]$$
+
+While 1-D row and column marginal projections achieve an impressive **93.96% accuracy** with non-linear ensemble models (Gradient Boosting), they inherently lose the **2-D joint spatial distribution** $P(x, y)$ of pixel mass. As a result:
+- Pairs of digits with similar horizontal and vertical mass densities (e.g., $3 \leftrightarrow 5$, $4 \leftrightarrow 9$, $1 \leftrightarrow 7$) exhibit high overlap in 56-D feature space.
+- The 2-D Convolutional Neural Network (CNN) preserves local $3 \times 3$ receptive fields, resolving these spatial ambiguities and boosting accuracy from **93.96%** to **99.61%** (achieving a **$15.5\times$ error reduction**, from 604 down to just 39 errors across 10,000 test digits).
+
+---
+
+## 📄 Documentation & Reports
+
+Detailed technical documentation and submission drafts are available in `docs/`:
+- **[`README_A2.md`](README_A2.md)**: Full implementation reference for Feature Set A2.
+- **[`docs/technical_report.md`](docs/technical_report.md)**: Comprehensive technical report draft with methodology, mathematical formulations, metric tables, and academic discussion.
