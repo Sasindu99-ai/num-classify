@@ -171,3 +171,4 @@ A comprehensive comparison across model complexity, storage footprint, and real-
 1. **Efficacy of Feature Set A2:** Reducing $784$ grayscale pixels down to $56$ continuous row/column sums ($14\times$ compression) preserves sufficient semantic energy for non-linear models to achieve **$93.96\%$ classification accuracy** and an **NMI of $0.5133$ in spectral clustering**.
 2. **Limit of 1-D Projections:** The fundamental ceiling of Feature Set A2 is bounded by Spatial Projection Ambiguity. Preserving 2-D local topology via a CNN provides a dramatic boost to **$99.61\%$ accuracy**, effectively eliminating ambiguity between topologically similar digits.
 3. **Cross-Representation Collaboration:** The modular Option A repository architecture guarantees that team members working on A1, A3, B1, B2, and B3 can independently push features and results. Executing `python -m src.compare_all` automatically aggregates all team modules into unified master leaderboards.
+
