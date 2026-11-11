@@ -70,3 +70,10 @@ results/*/models/
 
 # Lock files (uv / poetry / pipenv)
 *.lock
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Generated feature datasets
+*.npz
