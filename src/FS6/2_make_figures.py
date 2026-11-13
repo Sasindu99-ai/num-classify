@@ -211,7 +211,7 @@ def plot_4_class_balance(
     bars2 = ax.bar(digits, train_aug.values, width, label="Train Augmented (N=108,000)", color="#469990")
     bars3 = ax.bar(digits + width, val_counts.values, width, label="Validation (N=6,000)", color="#e6ab02")
 
-    ax.set_title("Class Balance Across Dataset Splits (EE5130 FS6 Preprocessing)", fontsize=12, fontweight="bold")
+    ax.set_title("Class Balance Across Dataset Splits (FS6 Preprocessing)", fontsize=12, fontweight="bold")
     ax.set_xlabel("Digit Class", fontsize=11, fontweight="bold")
     ax.set_ylabel("Sample Count", fontsize=11, fontweight="bold")
     ax.set_xticks(digits)
@@ -322,22 +322,22 @@ def main() -> None:
     # Generate Figures
     plot_1_original_vs_augmented(
         train_raw, train_labels, train_source_idx, train_is_augmented,
-        args.results_dir / "original_vs_augmented.png"
+        args.results_dir / "0_original_vs_augmented.png"
     )
     plot_2_raw_vs_contour(
         train_raw, train_contour, train_labels, train_is_augmented,
-        args.results_dir / "raw_vs_contour.png"
+        args.results_dir / "1_raw_vs_contour.png"
     )
     plot_3_ring_feature_profile(
         df_train,
-        args.results_dir / "ring_feature_profile.png"
+        args.results_dir / "2_ring_feature_profile.png"
     )
     plot_4_class_balance(
         df_train, df_val,
-        args.results_dir / "class_balance.png"
+        args.results_dir / "3_class_balance.png"
     )
     plot_5_ring_geometry_map(
-        args.results_dir / "ring_geometry_map.png"
+        args.results_dir / "4_ring_geometry_map.png"
     )
 
     print("=" * 80)
