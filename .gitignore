@@ -56,14 +56,12 @@ desktop.ini
 data/processed/
 data/augmented/
 data/features/
-*.npz
 *.npy
 
 # Project Specific: Heavy Trained Model Weights & Checkpoints
 # (Avoids GitHub 100MB file limit, e.g. random_forest.joblib is >500MB)
 results/models/
 results/*/models/
-*.joblib
 *.pt
 *.pth
 *.onnx
@@ -74,6 +72,3 @@ results/*/models/
 # Python cache files
 __pycache__/
 *.pyc
-
-# Generated feature datasets
-*.npz
