@@ -1,0 +1,49 @@
+{
+  "dataset": "MNIST handwritten digits (FS6: Contour Concentric Rings)",
+  "seed": 42,
+  "copies": 2,
+  "val_size": 0.1,
+  "contour_threshold": 100,
+  "raw_train_rows": 60000,
+  "train_rows": 162000,
+  "train_original_rows": 54000,
+  "train_augmented_rows": 108000,
+  "val_rows": 6000,
+  "num_features": 14,
+  "ring_sizes": [
+    108,
+    100,
+    92,
+    84,
+    76,
+    68,
+    60,
+    52,
+    44,
+    36,
+    28,
+    20,
+    12,
+    4
+  ],
+  "ring_sum_pixels": 784,
+  "augmentation_ranges": {
+    "rotation_deg": [
+      -10.0,
+      10.0
+    ],
+    "scale": [
+      0.9,
+      1.1
+    ],
+    "shear_x": [
+      -0.2,
+      0.2
+    ],
+    "translation_xy": [
+      -2,
+      2
+    ]
+  },
+  "include_test": true
+}
