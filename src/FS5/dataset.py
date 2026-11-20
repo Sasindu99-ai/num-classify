@@ -10,8 +10,8 @@ from src.a2.augmentation import load_augmented_training_set
 from src.common.data_loading import load_clean_partitions
 from src.common.utils import PROJECT_ROOT
 
-from src.b2.contours import extract_contours
-from src.b2.features import extract_features
+from src.FS5.contours import extract_contours
+from src.FS5.features import extract_features
 
 
 # B2 feature storage directory

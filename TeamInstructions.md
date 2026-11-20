@@ -67,7 +67,7 @@ The EE5130 project investigates two preprocessing paths and three feature repres
 | **Path A** (Raw Grayscale) | **A2** | **Row + Column Sums & 2-D CNN** | **56** | **`src/a2/`** | **`results/a2/`** | **✅ Completed & Verified** |
 | **Path A** (Raw Grayscale) | **A3** | Concentric Ring Densities | 14 | `src/a3/` | `results/a3/` | Teammate Module |
 | **Path B** (Contours) | **B1** | Flattened Contour Pixels | 784 | `src/b1/` | `results/b1/` | Teammate Module |
-| **Path B** (Contours) | **B2** | Contour Row + Column Sums | 56 | `src/b2/` | `results/b2/` | Teammate Module |
+| **Path B** (Contours) | **B2** | Contour Row + Column Sums | 56 | `src/FS5/` | `results/FS5/` | Teammate Module |
 | **Path B** (Contours) | **B3** | Contour Concentric Rings | 14 | `src/b3/` | `results/b3/` | Teammate Module |
 
 👉 For an end-to-end reference implementation, mathematical formulations, and execution examples, see **[`README_A2.md`](README_A2.md)**.

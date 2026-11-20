@@ -6,7 +6,7 @@ import numpy as np
 
 from src.common.utils import PROJECT_ROOT
 
-from src.b2.clustering.models import (
+from src.FS5.clustering.models import (
     run_kmeans,
     run_minibatch_kmeans,
     run_gaussian_mixture,

@@ -10,7 +10,7 @@ import torch.nn as nn
 from torch.utils.data import TensorDataset, DataLoader
 
 from src.common.utils import PROJECT_ROOT, RANDOM_SEED, set_seed
-from src.b2.classification.classical_models import load_b2_features
+from src.FS5.classification.classical_models import load_b2_features
 
 
 MODELS_DIR = PROJECT_ROOT / "results" / "b2" / "models"
