@@ -1,0 +1,722 @@
+[
+    {
+        "Model": "Logistic Regression",
+        "Digit": 0,
+        "Precision": 0.7751586582048957,
+        "Recall": 0.8724489795918368,
+        "F1-Score": 0.8209313490158425,
+        "Support": 980.0
+    },
+    {
+        "Model": "Logistic Regression",
+        "Digit": 1,
+        "Precision": 0.8926014319809069,
+        "Recall": 0.9885462555066079,
+        "F1-Score": 0.9381270903010034,
+        "Support": 1135.0
+    },
+    {
+        "Model": "Logistic Regression",
+        "Digit": 2,
+        "Precision": 0.7429805615550756,
+        "Recall": 0.6666666666666666,
+        "F1-Score": 0.7027579162410623,
+        "Support": 1032.0
+    },
+    {
+        "Model": "Logistic Regression",
+        "Digit": 3,
+        "Precision": 0.6431095406360424,
+        "Recall": 0.7207920792079208,
+        "F1-Score": 0.6797385620915033,
+        "Support": 1010.0
+    },
+    {
+        "Model": "Logistic Regression",
+        "Digit": 4,
+        "Precision": 0.7812817904374364,
+        "Recall": 0.7820773930753564,
+        "F1-Score": 0.7816793893129771,
+        "Support": 982.0
+    },
+    {
+        "Model": "Logistic Regression",
+        "Digit": 5,
+        "Precision": 0.6788793103448276,
+        "Recall": 0.3531390134529148,
+        "F1-Score": 0.4646017699115044,
+        "Support": 892.0
+    },
+    {
+        "Model": "Logistic Regression",
+        "Digit": 6,
+        "Precision": 0.8476683937823835,
+        "Recall": 0.8538622129436325,
+        "F1-Score": 0.8507540301612064,
+        "Support": 958.0
+    },
+    {
+        "Model": "Logistic Regression",
+        "Digit": 7,
+        "Precision": 0.8345323741007195,
+        "Recall": 0.7898832684824902,
+        "F1-Score": 0.8115942028985508,
+        "Support": 1028.0
+    },
+    {
+        "Model": "Logistic Regression",
+        "Digit": 8,
+        "Precision": 0.7727717923604309,
+        "Recall": 0.8100616016427105,
+        "F1-Score": 0.7909774436090226,
+        "Support": 974.0
+    },
+    {
+        "Model": "Logistic Regression",
+        "Digit": 9,
+        "Precision": 0.7142857142857143,
+        "Recall": 0.8325074331020813,
+        "F1-Score": 0.7688787185354691,
+        "Support": 1009.0
+    },
+    {
+        "Model": "Naive Bayes",
+        "Digit": 0,
+        "Precision": 0.9015691868758916,
+        "Recall": 0.6448979591836734,
+        "F1-Score": 0.7519333729922665,
+        "Support": 980.0
+    },
+    {
+        "Model": "Naive Bayes",
+        "Digit": 1,
+        "Precision": 0.8988954970263382,
+        "Recall": 0.93215859030837,
+        "F1-Score": 0.9152249134948097,
+        "Support": 1135.0
+    },
+    {
+        "Model": "Naive Bayes",
+        "Digit": 2,
+        "Precision": 0.8809523809523809,
+        "Recall": 0.2868217054263566,
+        "F1-Score": 0.4327485380116959,
+        "Support": 1032.0
+    },
+    {
+        "Model": "Naive Bayes",
+        "Digit": 3,
+        "Precision": 0.6498740554156172,
+        "Recall": 0.5108910891089109,
+        "F1-Score": 0.5720620842572062,
+        "Support": 1010.0
+    },
+    {
+        "Model": "Naive Bayes",
+        "Digit": 4,
+        "Precision": 0.8153846153846154,
+        "Recall": 0.0539714867617108,
+        "F1-Score": 0.10124164278892073,
+        "Support": 982.0
+    },
+    {
+        "Model": "Naive Bayes",
+        "Digit": 5,
+        "Precision": 0.8084507042253521,
+        "Recall": 0.3217488789237668,
+        "F1-Score": 0.4603047313552526,
+        "Support": 892.0
+    },
+    {
+        "Model": "Naive Bayes",
+        "Digit": 6,
+        "Precision": 0.47055837563451774,
+        "Recall": 0.9676409185803758,
+        "F1-Score": 0.6331967213114754,
+        "Support": 958.0
+    },
+    {
+        "Model": "Naive Bayes",
+        "Digit": 7,
+        "Precision": 0.6265865063460254,
+        "Recall": 0.9124513618677043,
+        "F1-Score": 0.742970297029703,
+        "Support": 1028.0
+    },
+    {
+        "Model": "Naive Bayes",
+        "Digit": 8,
+        "Precision": 0.6078651685393258,
+        "Recall": 0.555441478439425,
+        "F1-Score": 0.5804721030042919,
+        "Support": 974.0
+    },
+    {
+        "Model": "Naive Bayes",
+        "Digit": 9,
+        "Precision": 0.3724604966139955,
+        "Recall": 0.817641228939544,
+        "F1-Score": 0.5117866004962779,
+        "Support": 1009.0
+    },
+    {
+        "Model": "Linear Discriminant Analysis",
+        "Digit": 0,
+        "Precision": 0.7435653002859867,
+        "Recall": 0.7959183673469388,
+        "F1-Score": 0.7688516510596353,
+        "Support": 980.0
+    },
+    {
+        "Model": "Linear Discriminant Analysis",
+        "Digit": 1,
+        "Precision": 0.8210372534696859,
+        "Recall": 0.9903083700440528,
+        "F1-Score": 0.8977635782747604,
+        "Support": 1135.0
+    },
+    {
+        "Model": "Linear Discriminant Analysis",
+        "Digit": 2,
+        "Precision": 0.7294633077765608,
+        "Recall": 0.6453488372093024,
+        "F1-Score": 0.6848329048843188,
+        "Support": 1032.0
+    },
+    {
+        "Model": "Linear Discriminant Analysis",
+        "Digit": 3,
+        "Precision": 0.5926236378876781,
+        "Recall": 0.7,
+        "F1-Score": 0.6418520199727644,
+        "Support": 1010.0
+    },
+    {
+        "Model": "Linear Discriminant Analysis",
+        "Digit": 4,
+        "Precision": 0.7418426103646834,
+        "Recall": 0.7871690427698574,
+        "F1-Score": 0.7638339920948617,
+        "Support": 982.0
+    },
+    {
+        "Model": "Linear Discriminant Analysis",
+        "Digit": 5,
+        "Precision": 0.572463768115942,
+        "Recall": 0.265695067264574,
+        "F1-Score": 0.36294027565084225,
+        "Support": 892.0
+    },
+    {
+        "Model": "Linear Discriminant Analysis",
+        "Digit": 6,
+        "Precision": 0.8908246225319396,
+        "Recall": 0.8006263048016702,
+        "F1-Score": 0.8433205057724025,
+        "Support": 958.0
+    },
+    {
+        "Model": "Linear Discriminant Analysis",
+        "Digit": 7,
+        "Precision": 0.8614864864864865,
+        "Recall": 0.7441634241245136,
+        "F1-Score": 0.7985386221294363,
+        "Support": 1028.0
+    },
+    {
+        "Model": "Linear Discriminant Analysis",
+        "Digit": 8,
+        "Precision": 0.7110132158590309,
+        "Recall": 0.8285420944558521,
+        "F1-Score": 0.7652916073968705,
+        "Support": 974.0
+    },
+    {
+        "Model": "Linear Discriminant Analysis",
+        "Digit": 9,
+        "Precision": 0.6901408450704225,
+        "Recall": 0.7770069375619425,
+        "F1-Score": 0.731002331002331,
+        "Support": 1009.0
+    },
+    {
+        "Model": "Decision Tree",
+        "Digit": 0,
+        "Precision": 0.8365019011406845,
+        "Recall": 0.8979591836734694,
+        "F1-Score": 0.8661417322834646,
+        "Support": 980.0
+    },
+    {
+        "Model": "Decision Tree",
+        "Digit": 1,
+        "Precision": 0.9434447300771208,
+        "Recall": 0.9700440528634361,
+        "F1-Score": 0.9565595134665508,
+        "Support": 1135.0
+    },
+    {
+        "Model": "Decision Tree",
+        "Digit": 2,
+        "Precision": 0.716374269005848,
+        "Recall": 0.7122093023255814,
+        "F1-Score": 0.7142857142857143,
+        "Support": 1032.0
+    },
+    {
+        "Model": "Decision Tree",
+        "Digit": 3,
+        "Precision": 0.647636039250669,
+        "Recall": 0.7188118811881188,
+        "F1-Score": 0.681370248709526,
+        "Support": 1010.0
+    },
+    {
+        "Model": "Decision Tree",
+        "Digit": 4,
+        "Precision": 0.8677685950413223,
+        "Recall": 0.8553971486761711,
+        "F1-Score": 0.8615384615384616,
+        "Support": 982.0
+    },
+    {
+        "Model": "Decision Tree",
+        "Digit": 5,
+        "Precision": 0.6584463625154131,
+        "Recall": 0.5986547085201793,
+        "F1-Score": 0.6271285965942455,
+        "Support": 892.0
+    },
+    {
+        "Model": "Decision Tree",
+        "Digit": 6,
+        "Precision": 0.8662983425414365,
+        "Recall": 0.8183716075156576,
+        "F1-Score": 0.8416532474503489,
+        "Support": 958.0
+    },
+    {
+        "Model": "Decision Tree",
+        "Digit": 7,
+        "Precision": 0.8839103869653768,
+        "Recall": 0.8443579766536965,
+        "F1-Score": 0.863681592039801,
+        "Support": 1028.0
+    },
+    {
+        "Model": "Decision Tree",
+        "Digit": 8,
+        "Precision": 0.7585848074921956,
+        "Recall": 0.7484599589322382,
+        "F1-Score": 0.7534883720930232,
+        "Support": 974.0
+    },
+    {
+        "Model": "Decision Tree",
+        "Digit": 9,
+        "Precision": 0.8242303872889771,
+        "Recall": 0.8225966303270565,
+        "F1-Score": 0.8234126984126984,
+        "Support": 1009.0
+    },
+    {
+        "Model": "Random Forest",
+        "Digit": 0,
+        "Precision": 0.9402985074626866,
+        "Recall": 0.9642857142857143,
+        "F1-Score": 0.9521410579345088,
+        "Support": 980.0
+    },
+    {
+        "Model": "Random Forest",
+        "Digit": 1,
+        "Precision": 0.9604471195184867,
+        "Recall": 0.9841409691629956,
+        "F1-Score": 0.9721496953872933,
+        "Support": 1135.0
+    },
+    {
+        "Model": "Random Forest",
+        "Digit": 2,
+        "Precision": 0.8796019900497513,
+        "Recall": 0.8565891472868217,
+        "F1-Score": 0.8679430535100638,
+        "Support": 1032.0
+    },
+    {
+        "Model": "Random Forest",
+        "Digit": 3,
+        "Precision": 0.7921397379912664,
+        "Recall": 0.898019801980198,
+        "F1-Score": 0.8417633410672853,
+        "Support": 1010.0
+    },
+    {
+        "Model": "Random Forest",
+        "Digit": 4,
+        "Precision": 0.9442691903259727,
+        "Recall": 0.9144602851323829,
+        "F1-Score": 0.9291257113295396,
+        "Support": 982.0
+    },
+    {
+        "Model": "Random Forest",
+        "Digit": 5,
+        "Precision": 0.8878865979381443,
+        "Recall": 0.7724215246636771,
+        "F1-Score": 0.8261390887290168,
+        "Support": 892.0
+    },
+    {
+        "Model": "Random Forest",
+        "Digit": 6,
+        "Precision": 0.9375,
+        "Recall": 0.9237995824634656,
+        "F1-Score": 0.9305993690851735,
+        "Support": 958.0
+    },
+    {
+        "Model": "Random Forest",
+        "Digit": 7,
+        "Precision": 0.9377470355731226,
+        "Recall": 0.9231517509727627,
+        "F1-Score": 0.9303921568627451,
+        "Support": 1028.0
+    },
+    {
+        "Model": "Random Forest",
+        "Digit": 8,
+        "Precision": 0.9076600209863589,
+        "Recall": 0.8880903490759754,
+        "F1-Score": 0.8977685521536066,
+        "Support": 974.0
+    },
+    {
+        "Model": "Random Forest",
+        "Digit": 9,
+        "Precision": 0.872848948374761,
+        "Recall": 0.9048562933597621,
+        "F1-Score": 0.8885644768856448,
+        "Support": 1009.0
+    },
+    {
+        "Model": "Gradient Boosting",
+        "Digit": 0,
+        "Precision": 0.9667673716012085,
+        "Recall": 0.9795918367346939,
+        "F1-Score": 0.973137354282818,
+        "Support": 980.0
+    },
+    {
+        "Model": "Gradient Boosting",
+        "Digit": 1,
+        "Precision": 0.977332170880558,
+        "Recall": 0.9876651982378855,
+        "F1-Score": 0.9824715162138475,
+        "Support": 1135.0
+    },
+    {
+        "Model": "Gradient Boosting",
+        "Digit": 2,
+        "Precision": 0.884765625,
+        "Recall": 0.877906976744186,
+        "F1-Score": 0.8813229571984436,
+        "Support": 1032.0
+    },
+    {
+        "Model": "Gradient Boosting",
+        "Digit": 3,
+        "Precision": 0.8645038167938931,
+        "Recall": 0.897029702970297,
+        "F1-Score": 0.880466472303207,
+        "Support": 1010.0
+    },
+    {
+        "Model": "Gradient Boosting",
+        "Digit": 4,
+        "Precision": 0.9588900308324769,
+        "Recall": 0.9501018329938901,
+        "F1-Score": 0.9544757033248081,
+        "Support": 982.0
+    },
+    {
+        "Model": "Gradient Boosting",
+        "Digit": 5,
+        "Precision": 0.8823529411764706,
+        "Recall": 0.8576233183856502,
+        "F1-Score": 0.869812393405344,
+        "Support": 892.0
+    },
+    {
+        "Model": "Gradient Boosting",
+        "Digit": 6,
+        "Precision": 0.9527310924369747,
+        "Recall": 0.9467640918580376,
+        "F1-Score": 0.949738219895288,
+        "Support": 958.0
+    },
+    {
+        "Model": "Gradient Boosting",
+        "Digit": 7,
+        "Precision": 0.9516765285996055,
+        "Recall": 0.938715953307393,
+        "F1-Score": 0.9451518119490695,
+        "Support": 1028.0
+    },
+    {
+        "Model": "Gradient Boosting",
+        "Digit": 8,
+        "Precision": 0.9302083333333333,
+        "Recall": 0.9168377823408624,
+        "F1-Score": 0.9234746639089969,
+        "Support": 974.0
+    },
+    {
+        "Model": "Gradient Boosting",
+        "Digit": 9,
+        "Precision": 0.9129158512720157,
+        "Recall": 0.9246778989098117,
+        "F1-Score": 0.9187592319054653,
+        "Support": 1009.0
+    },
+    {
+        "Model": "k-Nearest Neighbours (k-NN)",
+        "Digit": 0,
+        "Precision": 0.7986633249791144,
+        "Recall": 0.9755102040816327,
+        "F1-Score": 0.8782728525493799,
+        "Support": 980.0
+    },
+    {
+        "Model": "k-Nearest Neighbours (k-NN)",
+        "Digit": 1,
+        "Precision": 0.9041867954911433,
+        "Recall": 0.9894273127753304,
+        "F1-Score": 0.9448885149347918,
+        "Support": 1135.0
+    },
+    {
+        "Model": "k-Nearest Neighbours (k-NN)",
+        "Digit": 2,
+        "Precision": 0.8549946294307197,
+        "Recall": 0.7713178294573644,
+        "F1-Score": 0.8110035659704534,
+        "Support": 1032.0
+    },
+    {
+        "Model": "k-Nearest Neighbours (k-NN)",
+        "Digit": 3,
+        "Precision": 0.7463556851311953,
+        "Recall": 0.7603960396039604,
+        "F1-Score": 0.7533104462972046,
+        "Support": 1010.0
+    },
+    {
+        "Model": "k-Nearest Neighbours (k-NN)",
+        "Digit": 4,
+        "Precision": 0.9103982300884956,
+        "Recall": 0.8380855397148677,
+        "F1-Score": 0.8727465535524921,
+        "Support": 982.0
+    },
+    {
+        "Model": "k-Nearest Neighbours (k-NN)",
+        "Digit": 5,
+        "Precision": 0.8093883357041252,
+        "Recall": 0.6378923766816144,
+        "F1-Score": 0.7134796238244514,
+        "Support": 892.0
+    },
+    {
+        "Model": "k-Nearest Neighbours (k-NN)",
+        "Digit": 6,
+        "Precision": 0.8821782178217822,
+        "Recall": 0.930062630480167,
+        "F1-Score": 0.9054878048780488,
+        "Support": 958.0
+    },
+    {
+        "Model": "k-Nearest Neighbours (k-NN)",
+        "Digit": 7,
+        "Precision": 0.8838334946757018,
+        "Recall": 0.8881322957198443,
+        "F1-Score": 0.885977680737506,
+        "Support": 1028.0
+    },
+    {
+        "Model": "k-Nearest Neighbours (k-NN)",
+        "Digit": 8,
+        "Precision": 0.916058394160584,
+        "Recall": 0.7731006160164271,
+        "F1-Score": 0.8385300668151447,
+        "Support": 974.0
+    },
+    {
+        "Model": "k-Nearest Neighbours (k-NN)",
+        "Digit": 9,
+        "Precision": 0.7883082373782108,
+        "Recall": 0.8820614469772051,
+        "F1-Score": 0.8325537885874649,
+        "Support": 1009.0
+    },
+    {
+        "Model": "Support Vector Machine (SVM)",
+        "Digit": 0,
+        "Precision": 0.9404761904761905,
+        "Recall": 0.9673469387755103,
+        "F1-Score": 0.9537223340040242,
+        "Support": 980.0
+    },
+    {
+        "Model": "Support Vector Machine (SVM)",
+        "Digit": 1,
+        "Precision": 0.9523404255319149,
+        "Recall": 0.9859030837004406,
+        "F1-Score": 0.9688311688311688,
+        "Support": 1135.0
+    },
+    {
+        "Model": "Support Vector Machine (SVM)",
+        "Digit": 2,
+        "Precision": 0.8400752587017873,
+        "Recall": 0.8653100775193798,
+        "F1-Score": 0.8525059665871122,
+        "Support": 1032.0
+    },
+    {
+        "Model": "Support Vector Machine (SVM)",
+        "Digit": 3,
+        "Precision": 0.7980952380952381,
+        "Recall": 0.8297029702970297,
+        "F1-Score": 0.8135922330097087,
+        "Support": 1010.0
+    },
+    {
+        "Model": "Support Vector Machine (SVM)",
+        "Digit": 4,
+        "Precision": 0.9387966804979253,
+        "Recall": 0.9215885947046843,
+        "F1-Score": 0.9301130524152107,
+        "Support": 982.0
+    },
+    {
+        "Model": "Support Vector Machine (SVM)",
+        "Digit": 5,
+        "Precision": 0.8387909319899244,
+        "Recall": 0.7466367713004485,
+        "F1-Score": 0.7900355871886121,
+        "Support": 892.0
+    },
+    {
+        "Model": "Support Vector Machine (SVM)",
+        "Digit": 6,
+        "Precision": 0.9339622641509434,
+        "Recall": 0.930062630480167,
+        "F1-Score": 0.9320083682008368,
+        "Support": 958.0
+    },
+    {
+        "Model": "Support Vector Machine (SVM)",
+        "Digit": 7,
+        "Precision": 0.9276381909547738,
+        "Recall": 0.8978599221789884,
+        "F1-Score": 0.9125061789421651,
+        "Support": 1028.0
+    },
+    {
+        "Model": "Support Vector Machine (SVM)",
+        "Digit": 8,
+        "Precision": 0.9036016949152542,
+        "Recall": 0.8757700205338809,
+        "F1-Score": 0.8894681960375391,
+        "Support": 974.0
+    },
+    {
+        "Model": "Support Vector Machine (SVM)",
+        "Digit": 9,
+        "Precision": 0.8660968660968661,
+        "Recall": 0.9038652130822596,
+        "F1-Score": 0.8845780795344326,
+        "Support": 1009.0
+    },
+    {
+        "Model": "Multilayer Perceptron (MLP)",
+        "Digit": 0,
+        "Precision": 0.9597989949748744,
+        "Recall": 0.9744897959183674,
+        "F1-Score": 0.9670886075949368,
+        "Support": 980.0
+    },
+    {
+        "Model": "Multilayer Perceptron (MLP)",
+        "Digit": 1,
+        "Precision": 0.963855421686747,
+        "Recall": 0.986784140969163,
+        "F1-Score": 0.9751850239442751,
+        "Support": 1135.0
+    },
+    {
+        "Model": "Multilayer Perceptron (MLP)",
+        "Digit": 2,
+        "Precision": 0.873062015503876,
+        "Recall": 0.873062015503876,
+        "F1-Score": 0.873062015503876,
+        "Support": 1032.0
+    },
+    {
+        "Model": "Multilayer Perceptron (MLP)",
+        "Digit": 3,
+        "Precision": 0.8314285714285714,
+        "Recall": 0.8643564356435643,
+        "F1-Score": 0.8475728155339806,
+        "Support": 1010.0
+    },
+    {
+        "Model": "Multilayer Perceptron (MLP)",
+        "Digit": 4,
+        "Precision": 0.9436475409836066,
+        "Recall": 0.9378818737270875,
+        "F1-Score": 0.940755873340143,
+        "Support": 982.0
+    },
+    {
+        "Model": "Multilayer Perceptron (MLP)",
+        "Digit": 5,
+        "Precision": 0.874390243902439,
+        "Recall": 0.8038116591928252,
+        "F1-Score": 0.8376168224299065,
+        "Support": 892.0
+    },
+    {
+        "Model": "Multilayer Perceptron (MLP)",
+        "Digit": 6,
+        "Precision": 0.9349173553719008,
+        "Recall": 0.9446764091858038,
+        "F1-Score": 0.9397715472481828,
+        "Support": 958.0
+    },
+    {
+        "Model": "Multilayer Perceptron (MLP)",
+        "Digit": 7,
+        "Precision": 0.9404296875,
+        "Recall": 0.9367704280155642,
+        "F1-Score": 0.9385964912280702,
+        "Support": 1028.0
+    },
+    {
+        "Model": "Multilayer Perceptron (MLP)",
+        "Digit": 8,
+        "Precision": 0.912041884816754,
+        "Recall": 0.8942505133470225,
+        "F1-Score": 0.9030585795749093,
+        "Support": 974.0
+    },
+    {
+        "Model": "Multilayer Perceptron (MLP)",
+        "Digit": 9,
+        "Precision": 0.8948919449901768,
+        "Recall": 0.9028741328047571,
+        "F1-Score": 0.8988653182042428,
+        "Support": 1009.0
+    }
+]
