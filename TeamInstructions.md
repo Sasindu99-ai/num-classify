@@ -72,8 +72,6 @@ The EE5130 project investigates two preprocessing paths and three feature repres
 
 👉 For an end-to-end reference implementation, mathematical formulations, and execution examples, see **[`README_A2.md`](README_A2.md)**.
 
-👉 For the B2 implementation, feature extraction methodology, classification and clustering experiments, and results, see **[technical_report_B2.md](docs/technical_report_B2.md)**.
-
 ---
 
 ## 🤝 3. Team Integration & Collaboration Guidelines
