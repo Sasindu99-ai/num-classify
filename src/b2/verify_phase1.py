@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from src.common.data_loading import load_clean_partitions
-from src.FS5.contours import extract_contour, extract_contours
+from src.b2.contours import extract_contour, extract_contours
 
 
 def main():

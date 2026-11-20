@@ -9,7 +9,7 @@ import pandas as pd
 from sklearn.metrics import silhouette_score
 
 from src.common.utils import PROJECT_ROOT
-from src.FS5.clustering.models import run_dbscan
+from src.b2.clustering.models import run_dbscan
 
 
 # --------------------------------------------------

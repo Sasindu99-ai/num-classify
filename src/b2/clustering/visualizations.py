@@ -16,7 +16,7 @@ from sklearn.manifold import TSNE
 
 from src.common.utils import PROJECT_ROOT
 from src.a2.augmentation import load_augmented_training_set
-from src.FS5.contours import extract_contours
+from src.b2.contours import extract_contours
 
 
 # ---------------------------------------------------------
